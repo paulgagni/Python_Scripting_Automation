@@ -69,4 +69,47 @@ print(my_new_value,type(my_new_value)) #type=bool
 print(my_one_more,type(my_one_more)) #type=str
 #my_one_more=true  This is display error not defined.  If you use quotes for "True" or False" then it will convert to string.
 
+x=56
+print(x,type(x))  #int data type
+y=str(x)
+print(y,type(y))  #str data type
+z=bool(x)
+print(z,type(z))   #bool data type
 
+p=0
+print(p,type(p))
+q=bool(p)
+print(q,type(q))
+
+# Any data type can be converted into boolean
+#  bool(any_data_type)= True or False
+#  bool(empty)=False
+#  bool(non-empty)=True
+bool(0)   #False
+x=""
+bool(x)   #False
+bool(None) #False
+bool([])  #False
+bool({})  #False
+bool(())  #False
+
+#Any data type can be converted into as string, but the reverse is not always true.
+#versions are always a string
+x="2.1.3.5"
+print(type(x))
+
+int(x)    #ValueError: invalid literal for int() with base 10: '2.1.3.5'
+
+#***MULTIPLE_VARIABLES***
+
+x=3
+y=5.7
+lang_name="python scripting"
+print(x,y,lang_name)   #prints on same line
+print("{} {} {}".format(x,y,lang_name))  #prints on same line
+print("{} \n{} \n{}".format(x,y,lang_name))  #\n prints on separate line (Older way of doing it)
+
+print(f"x value is: {x} \ny value is: {y} \nlangague is: {lang_name}")  #Preferred way for Python 3
+
+my_req_output=f"x value is: {x} \ny value is: {y} \nLanguage is: {lang_name}"
+print(my_req_output)
